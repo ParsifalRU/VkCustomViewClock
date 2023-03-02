@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">VkCustomViewClock</string>
     <string name="textView">Programming add CustomView with height = 222 width = 333</string>
-    <string name="res_400_50">400 x 50</string>
-    <string name="res_50_400">50 x 400</string>
+    <string name="res_400_50">400 x 50 + marginTop = "20dp"</string>
+    <string name="res_50_400">50 x 400 + gravity = "central"</string>
     <string name="res_70_70">70 x 70</string>
     <string name="res_140_140">140 x 140</string>
     <string name="res_400_400">400 x 400</string>

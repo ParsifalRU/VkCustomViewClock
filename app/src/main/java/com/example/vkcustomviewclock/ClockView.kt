@@ -37,6 +37,7 @@ class ClockView : View {
         defStyleAttr
     )
 
+    //Init Value
     private fun initClock() {
         height = getHeight()
         width = getWidth()
@@ -54,6 +55,7 @@ class ClockView : View {
         isInit = true
     }
 
+    //Draw all elements
     override fun onDraw(canvas: Canvas) {
         if (!isInit) {
             initClock()
@@ -67,6 +69,7 @@ class ClockView : View {
         drawCircle(canvas)
     }
 
+    //pattern to draw hand
     private fun drawHand(
         canvas: Canvas,
         loc: Double,
@@ -101,6 +104,7 @@ class ClockView : View {
         )
     }
 
+    //Logic to draw all hand
     private fun drawHands(canvas: Canvas) {
         val calendar = Calendar.getInstance()
         var hour = calendar[Calendar.HOUR_OF_DAY].toFloat()
@@ -122,6 +126,7 @@ class ClockView : View {
         )
     }
 
+    //Draw numbers on clock face
     private fun drawNumeral(canvas: Canvas) {
         paint!!.textSize = fontSize.toFloat()
         for (number in numbers) {
@@ -134,6 +139,7 @@ class ClockView : View {
         }
     }
 
+    //Draw Central dot
     private fun drawCenter(canvas: Canvas) {
         paint!!.style = Paint.Style.FILL
         canvas.drawCircle(
@@ -143,6 +149,7 @@ class ClockView : View {
             paint!!)
     }
 
+    //Draw a circle of dots
     private fun drawDoterCircle(canvas: Canvas){
         var doterRadius: Float
         for (i in 1 .. 60) {
@@ -158,6 +165,7 @@ class ClockView : View {
         }
     }
 
+    //Draw main (external) circle solid
     private fun drawCircle(canvas: Canvas) {
         paint!!.reset()
         paint!!.color = ContextCompat.getColor(context, R.color.black)
